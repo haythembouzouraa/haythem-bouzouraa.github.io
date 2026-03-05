@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Haythem Bouzouraa — IT Security Manager</title>
+<meta name="description" content="IT Security Manager & Network Infrastructure Specialist — 17+ years of cybersecurity expertise. Open to Canadian opportunities."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --void:#03060F;
+  --deep:#060D1C;
+  --surface:#0A1628;
+  --glass:rgba(10,22,40,0.6);
+  --glass2:rgba(255,255,255,0.03);
+  --cyan:#00E5FF;
+  --cyan2:#00FFB3;
+  --flame:#FF6B35;
+  --gold:#FFB800;
+  --text:#EEF2FF;
+  --dim:#5A6A8A;
+  --line:rgba(0,229,255,0.12);
+  --glow-cyan:0 0 40px rgba(0,229,255,0.25);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--void);color:var(--text);overflow-x:hidden;cursor:none;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--void);}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--cyan),var(--cyan2));}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.025;pointer-events:none;z-index:1000;}
+#cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,width .2s,height .2s;mix-blend-mode:screen;}
+#cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(0,229,255,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .15s ease;}
+#bg-canvas{position:fixed;inset:0;z-index:0;opacity:0.5;pointer-events:none;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.4rem 6%;transition:all .4s;}
+nav.scrolled{background:rgba(3,6,15,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:1rem 6%;}
+.nav-brand{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:4px;background:linear-gradient(90deg,var(--cyan),var(--cyan2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-menu{display:flex;align-items:center;gap:2.5rem;}
+.nav-menu a{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:.2s;position:relative;}
+.nav-menu a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--cyan);transition:.3s;}
+.nav-menu a:hover{color:var(--cyan);}
+.nav-menu a:hover::after{width:100%;}
+.nav-hire{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--cyan);color:var(--cyan);padding:.5rem 1.5rem;text-decoration:none;background:rgba(0,229,255,0.05);transition:.3s;position:relative;overflow:hidden;}
+.nav-hire::before{content:'';position:absolute;inset:0;background:var(--cyan);transform:translateX(-100%);transition:.3s;z-index:-1;}
+.nav-hire:hover{color:var(--void);}
+.nav-hire:hover::before{transform:translateX(0);}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 6% 4rem;position:relative;z-index:1;gap:4rem;}
+.hero-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:1.8rem;}
+.eyebrow-line{width:40px;height:1px;background:var(--cyan);}
+.eyebrow-text{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;}
+.eyebrow-dot{width:6px;height:6px;background:var(--flame);border-radius:50%;animation:pulse-dot 2s ease-in-out infinite;}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,.5);}50%{box-shadow:0 0 0 8px rgba(255,107,53,0);}}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,8vw,7.5rem);line-height:.92;letter-spacing:2px;margin-bottom:1.2rem;}
+.hero-name .line1{display:block;color:var(--text);}
+.hero-name .line2{display:block;background:linear-gradient(90deg,var(--cyan),var(--cyan2),var(--cyan));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite;}
+@keyframes shimmer{to{background-position:200%;}}
+.hero-role{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--flame);letter-spacing:2px;margin-bottom:1.5rem;text-transform:uppercase;}
+.hero-desc{font-size:1.05rem;color:var(--dim);line-height:1.9;max-width:500px;margin-bottom:2.5rem;font-weight:300;}
+.hero-desc b{color:var(--text);font-weight:500;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;}
+.btn-glow{display:inline-flex;align-items:center;gap:.6rem;background:linear-gradient(135deg,var(--cyan),var(--cyan2));color:var(--void);padding:.9rem 2.2rem;font-family:'Outfit',sans-serif;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.5px;transition:.3s;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px));}
+.btn-glow:hover{transform:translateY(-3px);box-shadow:var(--glow-cyan);}
+.btn-ghost{display:inline-flex;align-items:center;gap:.6rem;color:var(--text);padding:.9rem 2.2rem;font-family:'Outfit',sans-serif;font-weight:500;font-size:.9rem;text-decoration:none;letter-spacing:.5px;border:1px solid rgba(255,255,255,.12);background:var(--glass2);backdrop-filter:blur(10px);transition:.3s;}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px);}
+.hero-metrics{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--line);}
+.metric-val{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--cyan2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.metric-label{font-size:.75rem;color:var(--dim);letter-spacing:1px;margin-top:.2rem;}
+.hero-right{display:flex;justify-content:center;align-items:center;position:relative;}
+.id-card{width:340px;background:linear-gradient(135deg,rgba(10,22,40,0.9),rgba(6,13,28,0.95));border:1px solid rgba(0,229,255,0.2);backdrop-filter:blur(20px);padding:2.5rem;position:relative;overflow:hidden;transform-style:preserve-3d;transition:transform .1s ease;box-shadow:0 30px 80px rgba(0,0,0,.6),var(--glow-cyan);}
+.id-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--cyan2),var(--flame));}
+.id-card::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(0,229,255,0.06) 0%,transparent 60%);pointer-events:none;}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;}
+.card-logo{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:3px;color:var(--cyan);}
+.card-badge{background:rgba(0,229,255,0.1);border:1px solid rgba(0,229,255,0.3);padding:.3rem .8rem;font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--cyan);letter-spacing:2px;}
+.card-avatar{width:80px;height:80px;background:linear-gradient(135deg,var(--cyan),var(--cyan2));border-radius:50%;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;font-size:2.2rem;box-shadow:0 0 30px rgba(0,229,255,0.4);position:relative;}
+.card-avatar::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1px dashed rgba(0,229,255,0.4);animation:rotatering 8s linear infinite;}
+@keyframes rotatering{to{transform:rotate(360deg);}}
+.card-name{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:2px;text-align:center;margin-bottom:.3rem;}
+.card-title-text{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--cyan);letter-spacing:2px;text-align:center;margin-bottom:2rem;text-transform:uppercase;}
+.card-info{display:flex;flex-direction:column;gap:.8rem;}
+.card-row{display:flex;align-items:center;gap:.8rem;font-size:.8rem;color:var(--dim);}
+.card-row-icon{color:var(--cyan);font-size:.9rem;width:18px;}
+.card-divider{height:1px;background:var(--line);margin:1rem 0;}
+.card-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem;}
+.chip{font-family:'JetBrains Mono',monospace;font-size:.6rem;padding:.25rem .6rem;letter-spacing:1px;border:1px solid rgba(0,229,255,0.25);color:var(--cyan);background:rgba(0,229,255,0.06);}
+.chip.orange{border-color:rgba(255,107,53,.3);color:var(--flame);background:rgba(255,107,53,.06);}
+.float-box{position:absolute;border:1px solid rgba(0,229,255,0.15);font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--cyan);padding:.5rem .8rem;letter-spacing:1px;background:rgba(3,6,15,0.8);backdrop-filter:blur(10px);white-space:nowrap;}
+.fb1{top:-20px;right:-30px;animation:floaty 4s ease-in-out infinite;}
+.fb2{bottom:-20px;left:-40px;animation:floaty 4s ease-in-out infinite .8s;}
+.fb3{top:40%;right:-60px;animation:floaty 4s ease-in-out infinite 1.6s;}
+@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+/* SECTIONS */
+.section{position:relative;z-index:1;padding:7rem 6%;}
+.section-alt{background:var(--deep);}
+.s-label{display:inline-flex;align-items:center;gap:.6rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;}
+.s-label-num{color:var(--flame);}
+.s-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,4vw,4rem);letter-spacing:2px;line-height:1;margin-bottom:3.5rem;}
+.s-title span{background:linear-gradient(90deg,var(--cyan),var(--cyan2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.max{max-width:1280px;margin:0 auto;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.2;}
+
+/* ABOUT */
+.about-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:6rem;align-items:start;}
+.about-text p{font-size:1rem;color:var(--dim);line-height:1.9;margin-bottom:1.2rem;font-weight:300;}
+.about-text p b{color:var(--text);font-weight:500;}
+.about-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem;}
+.atag{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--text);letter-spacing:1px;padding:.35rem .9rem;background:var(--glass2);border:1px solid rgba(255,255,255,.08);transition:.2s;}
+.atag:hover{border-color:var(--cyan);color:var(--cyan);}
+.stats-panel{display:flex;flex-direction:column;gap:1.5rem;}
+.stat-block{padding:1.8rem;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);position:relative;overflow:hidden;transition:.3s;}
+.stat-block::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--cyan),var(--cyan2));}
+.stat-block:hover{border-color:rgba(0,229,255,.3);transform:translateX(6px);}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--cyan2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-t{font-size:.78rem;color:var(--dim);letter-spacing:1px;margin-top:.2rem;}
+
+/* EXPERTISE */
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.exp-card{background:var(--void);padding:2.5rem 2rem;transition:.4s;position:relative;overflow:hidden;}
+.exp-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:0;background:linear-gradient(to top,rgba(0,229,255,0.06),transparent);transition:.4s;}
+.exp-card:hover::before{height:100%;}
+.exp-card:hover{background:var(--surface);}
+.exp-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--flame);letter-spacing:2px;margin-bottom:1.5rem;}
+.exp-icon{font-size:2rem;margin-bottom:1rem;display:block;}
+.exp-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:2px;color:var(--text);margin-bottom:1.2rem;}
+.exp-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.exp-list li{font-size:.82rem;color:var(--dim);display:flex;align-items:flex-start;gap:.6rem;line-height:1.5;}
+.exp-list li::before{content:'—';color:var(--cyan);font-family:'JetBrains Mono',monospace;font-size:.7rem;flex-shrink:0;margin-top:.1rem;}
+
+/* TIMELINE */
+.timeline{position:relative;max-width:860px;}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--cyan),rgba(0,229,255,0) 90%);}
+.tl-entry{padding:0 0 4rem 3.5rem;position:relative;opacity:0;transform:translateY(20px);transition:.7s ease;}
+.tl-entry.vis{opacity:1;transform:translateY(0);}
+.tl-pip{position:absolute;left:-6px;top:6px;width:12px;height:12px;background:var(--void);border:2px solid var(--cyan);transform:rotate(45deg);box-shadow:0 0 16px var(--cyan);}
+.tl-pip.active{background:var(--cyan);}
+.tl-when{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--flame);letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem;}
+.tl-role{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:2px;color:var(--text);margin-bottom:.2rem;line-height:1;}
+.tl-org{font-size:.85rem;color:var(--cyan);margin-bottom:1rem;font-weight:500;}
+.tl-body{font-size:.9rem;color:var(--dim);line-height:1.9;font-weight:300;}
+.tl-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;}
+.pill{font-family:'JetBrains Mono',monospace;font-size:.62rem;padding:.2rem .7rem;letter-spacing:1px;border:1px solid rgba(0,229,255,.2);color:var(--dim);background:var(--glass2);}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.proj-card{background:var(--glass);border:1px solid var(--line);overflow:hidden;transition:.4s;position:relative;display:flex;flex-direction:column;}
+.proj-card:hover{border-color:rgba(0,229,255,.4);transform:translateY(-6px);box-shadow:0 30px 60px rgba(0,0,0,.4),var(--glow-cyan);}
+.proj-top{height:160px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.proj-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--surface),var(--deep));}
+.proj-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,229,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,0.04) 1px,transparent 1px);background-size:30px 30px;}
+.proj-emoji{font-size:3.5rem;position:relative;z-index:1;filter:drop-shadow(0 0 20px rgba(0,229,255,0.5));}
+.proj-num{position:absolute;top:1rem;right:1rem;font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--dim);letter-spacing:2px;}
+.proj-body{padding:1.8rem;flex:1;display:flex;flex-direction:column;}
+.proj-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;margin-bottom:.6rem;}
+.proj-desc{font-size:.85rem;color:var(--dim);line-height:1.8;font-weight:300;flex:1;margin-bottom:1.2rem;}
+.proj-stack{display:flex;flex-wrap:wrap;gap:.4rem;}
+.stack-tag{font-family:'JetBrains Mono',monospace;font-size:.6rem;padding:.25rem .7rem;letter-spacing:1px;color:var(--cyan2);border:1px solid rgba(0,255,179,.2);background:rgba(0,255,179,.05);}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+.cert-item{background:var(--glass);border:1px solid var(--line);padding:2rem 1.5rem;text-align:center;transition:.4s;position:relative;overflow:hidden;}
+.cert-item::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--cyan2));transition:.4s;}
+.cert-item:hover::after{width:100%;}
+.cert-item:hover{transform:translateY(-5px);border-color:rgba(0,229,255,.3);}
+.cert-ico{font-size:2.2rem;margin-bottom:.8rem;}
+.cert-name{font-family:'Outfit',sans-serif;font-weight:600;font-size:.88rem;color:var(--text);margin-bottom:.3rem;line-height:1.3;}
+.cert-by{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--gold);letter-spacing:1px;}
+.cert-yr{position:absolute;top:.6rem;right:.7rem;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--dim);}
+
+/* SKILLS */
+.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:5rem;}
+.skill-item{margin-bottom:2rem;}
+.skill-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:.6rem;}
+.skill-n{font-family:'Outfit',sans-serif;font-weight:500;font-size:.9rem;}
+.skill-p{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--cyan);}
+.skill-track{height:2px;background:rgba(255,255,255,.06);position:relative;}
+.skill-bar{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--cyan2));transition:width 1.8s cubic-bezier(.19,1,.22,1);position:relative;}
+.skill-bar::after{content:'';position:absolute;right:-1px;top:-4px;width:10px;height:10px;background:var(--cyan2);clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);box-shadow:0 0 12px var(--cyan2);}
+.skill-cat{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--flame);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;padding-left:1rem;border-left:2px solid var(--flame);}
+
+/* EDUCATION */
+.edu-list{max-width:860px;display:flex;flex-direction:column;gap:1rem;}
+.edu-row{display:grid;grid-template-columns:120px 1fr;gap:2rem;align-items:start;padding:1.8rem;background:var(--glass);border:1px solid var(--line);transition:.3s;}
+.edu-row:hover{border-color:rgba(0,229,255,.3);transform:translateX(5px);}
+.edu-yr{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--cyan);letter-spacing:1px;padding-top:.2rem;}
+.edu-deg{font-family:'Outfit',sans-serif;font-weight:600;font-size:1rem;margin-bottom:.25rem;}
+.edu-sch{font-size:.82rem;color:var(--dim);}
+.edu-note{display:inline-block;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--cyan2);border:1px solid rgba(0,255,179,.25);padding:.2rem .6rem;background:rgba(0,255,179,.05);letter-spacing:1px;}
+
+/* LANGUAGES */
+.lang-row{display:flex;gap:2rem;max-width:700px;flex-wrap:wrap;}
+.lang-item{flex:1;min-width:160px;padding:2rem;text-align:center;background:var(--glass);border:1px solid var(--line);transition:.3s;}
+.lang-item:hover{border-color:var(--cyan);transform:scale(1.04);}
+.lang-fl{font-size:2.8rem;margin-bottom:.6rem;}
+.lang-nm{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;margin-bottom:.2rem;}
+.lang-lv{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--cyan);letter-spacing:2px;}
+
+/* CONTACT */
+#contact{position:relative;overflow:hidden;}
+.contact-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(0,229,255,0.06) 0%,transparent 70%);pointer-events:none;}
+.contact-inner{max-width:700px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.contact-lead{font-size:1.05rem;color:var(--dim);line-height:1.9;font-weight:300;margin-bottom:3rem;}
+.contact-lead b{color:var(--text);font-weight:500;}
+.contact-links{display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem;}
+.c-link{display:flex;align-items:center;gap:1.2rem;padding:1.2rem 2rem;background:var(--glass);border:1px solid var(--line);text-decoration:none;color:var(--text);transition:.3s;font-size:.9rem;}
+.c-link:hover{border-color:var(--cyan);background:rgba(0,229,255,0.05);transform:translateX(6px);}
+.c-icon{font-size:1.3rem;color:var(--cyan);}
+.c-val{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--dim);}
+.c-lbl{font-weight:500;}
+.availability{display:inline-flex;align-items:center;gap:.8rem;padding:.8rem 1.8rem;background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.25);font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;}
+.avail-dot{width:8px;height:8px;background:var(--cyan2);border-radius:50%;animation:pulse-dot 2s ease-in-out infinite;}
+
+footer{background:var(--void);border-top:1px solid var(--line);padding:2rem 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:3px;color:var(--cyan);}
+.footer-note{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--dim);letter-spacing:1px;}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.8s ease;}
+.reveal.vis{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:.8s ease;}
+.reveal-left.vis{opacity:1;transform:translateX(0);}
+
+@media(max-width:1024px){
+  #hero{grid-template-columns:1fr;padding-top:7rem;}
+  .hero-right{display:none;}
+  .about-layout{grid-template-columns:1fr;}
+  .exp-grid{grid-template-columns:repeat(2,1fr);}
+  .proj-grid{grid-template-columns:1fr;}
+  .cert-grid{grid-template-columns:repeat(2,1fr);}
+  .skills-layout{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .nav-menu{display:none;}
+  #hero{padding:6rem 5% 3rem;}
+  .section{padding:5rem 5%;}
+  .exp-grid{grid-template-columns:1fr;}
+  .cert-grid{grid-template-columns:1fr 1fr;}
+  .hero-metrics{gap:1.5rem;}
+  .edu-row{grid-template-columns:1fr;}
+  footer{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <div class="nav-brand">HB_SEC</div>
+  <div class="nav-menu">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certs</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-hire">Available for hire</a>
+</nav>
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">IT Security Manager</span>
+      <div class="eyebrow-dot"></div>
+    </div>
+    <h1 class="hero-name">
+      <span class="line1">HAYTHEM</span>
+      <span class="line2">BOUZOURAA</span>
+    </h1>
+    <div class="hero-role">// Network & Infrastructure Security Specialist</div>
+    <p class="hero-desc">Securing enterprise infrastructure, networks, and data centers with <b>17+ years</b> of cybersecurity experience across public sector, pharma, and manufacturing. <b>CCNA</b> certified. <b>Master's</b> in InfoSec in progress. Open to <b>Canadian opportunities 🇨🇦</b>.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-glow">⚡ Contact Me</a>
+      <a href="#experience" class="btn-ghost">View Experience →</a>
+      <a href="https://www.linkedin.com/in/haythem-bouzouraa-47126110b/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
+    </div>
+    <div class="hero-metrics">
+      <div><div class="metric-val">17+</div><div class="metric-label">Years Exp.</div></div>
+      <div><div class="metric-val">4</div><div class="metric-label">Companies</div></div>
+      <div><div class="metric-val">9+</div><div class="metric-label">Certifications</div></div>
+      <div><div class="metric-val">3</div><div class="metric-label">Languages</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="float-box fb1">CCNA ✓ · DEVNET ✓</div>
+    <div class="float-box fb2">🇨🇦 Open to Canada</div>
+    <div class="float-box fb3">M.SSII 2026</div>
+    <div class="id-card" id="id-card">
+      <div class="card-header"><div class="card-logo">HB_SEC</div><div class="card-badge">ACTIVE</div></div>
+      <div class="card-avatar">🛡️</div>
+      <div class="card-name">HAYTHEM BOUZOURAA</div>
+      <div class="card-title-text">IT Security Manager</div>
+      <div class="card-info">
+        <div class="card-row"><span class="card-row-icon">📍</span>Tunis, Tunisia</div>
+        <div class="card-row"><span class="card-row-icon">📧</span>haythem.bouzouraa@etudiant-isi.utm.tn</div>
+        <div class="card-row"><span class="card-row-icon">📞</span>+216 22 876 195</div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-chips">
+        <span class="chip">Active Directory</span><span class="chip">Firewall</span>
+        <span class="chip">Nutanix</span><span class="chip orange">CCNA</span>
+        <span class="chip orange">DevNet</span><span class="chip">Kali Linux</span>
+        <span class="chip">Splunk</span><span class="chip">Zero Trust</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section section-alt" id="about">
+  <div class="max">
+    <div class="s-label"><span class="s-label-num">01 </span>About</div>
+    <div class="about-layout">
+      <div class="about-text reveal-left">
+        <h2 class="s-title">IT Security <span>Expert</span></h2>
+        <p>I am an <b>IT Security Manager</b> at the Ministry of Agriculture, Water Resources & Maritime Fisheries in Tunisia — a large public-sector organization where I oversee enterprise-wide cybersecurity infrastructure.</p>
+        <p>Over <b>17+ years</b>, my career has spanned government, pharmaceutical (Opalia Pharma), and manufacturing (Industrie des Nouvelles Briques) environments, giving me a rare breadth of perspective on IT security challenges across regulated industries.</p>
+        <p>I manage <b>Active Directory, enterprise firewalls, Nutanix HCI, Data Centers, and HP/Aruba switching</b>. I hold a <b>Bachelor's in Computer Systems Development</b> and am completing a <b>Master's in Information Systems & Infrastructure Security</b>. Currently <b>open to international opportunities in Canada</b>.</p>
+        <div class="about-tags">
+          <span class="atag">Active Directory</span><span class="atag">Firewall Admin</span>
+          <span class="atag">Nutanix HCI</span><span class="atag">CCNA Certified</span>
+          <span class="atag">DevNet Associate</span><span class="atag">Zero Trust</span>
+          <span class="atag">Data Center</span><span class="atag">Pentest</span>
+          <span class="atag">SIEM</span><span class="atag">Linux</span>
+        </div>
+      </div>
+      <div class="stats-panel reveal">
+        <div class="stat-block"><div class="stat-n">17+</div><div class="stat-t">Years of Professional Experience</div></div>
+        <div class="stat-block"><div class="stat-n">9+</div><div class="stat-t">IT & Security Certifications</div></div>
+        <div class="stat-block"><div class="stat-n">3</div><div class="stat-t">Industries Secured (Gov, Pharma, Industry)</div></div>
+        <div class="stat-block"><div class="stat-n">2026</div><div class="stat-t">Master's M.SSII Expected Graduation</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="expertise">
+  <div class="max">
+    <div class="s-label"><span class="s-label-num">02 </span>Core Expertise</div>
+    <h2 class="s-title reveal">Technical <span>Capabilities</span></h2>
+    <div class="exp-grid reveal">
+      <div class="exp-card"><div class="exp-num">01</div><span class="exp-icon">🛡️</span><div class="exp-title">Cybersecurity</div><ul class="exp-list"><li>Incident Detection & Response</li><li>Security Auditing</li><li>Vulnerability Assessment</li><li>Zero Trust Architecture</li><li>Penetration Testing</li><li>Cryptography & PKI</li><li>DevSecOps</li></ul></div>
+      <div class="exp-card"><div class="exp-num">02</div><span class="exp-icon">🌐</span><div class="exp-title">Network & Infra</div><ul class="exp-list"><li>Active Directory</li><li>LAN / WAN Architecture</li><li>Data Center Operations</li><li>HP / Aruba Switching</li><li>Nutanix HCI</li><li>Cisco Networks</li><li>VPN & Firewall Config</li></ul></div>
+      <div class="exp-card"><div class="exp-num">03</div><span class="exp-icon">🔍</span><div class="exp-title">Security Tools</div><ul class="exp-list"><li>Splunk / ELK / QRadar</li><li>Kali Linux / Nmap</li><li>Wireshark / OpenVAS</li><li>Burp Suite / Metasploit</li><li>pfSense / Fortinet</li><li>Cisco ASA / IDS/IPS</li><li>Snort / UTD</li></ul></div>
+      <div class="exp-card"><div class="exp-num">04</div><span class="exp-icon">☁️</span><div class="exp-title">Cloud & Virt.</div><ul class="exp-list"><li>VMware / Hyper-V</li><li>Proxmox Home Lab</li><li>AWS / Azure</li><li>Docker / Kubernetes</li><li>VirtualBox</li><li>VM Lifecycle Mgmt</li><li>IoT Security</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section section-alt" id="experience">
+  <div class="max">
+    <div class="s-label"><span class="s-label-num">03 </span>Experience</div>
+    <h2 class="s-title reveal">Professional <span>Timeline</span></h2>
+    <div class="timeline">
+      <div class="tl-entry"><div class="tl-pip active"></div><div class="tl-when">Oct 2019 — Present · 5+ Years</div><div class="tl-role">IT Security Manager</div><div class="tl-org">Ministry of Agriculture, Water Resources & Maritime Fisheries — Ariana, Tunisia</div><div class="tl-body">Oversees enterprise-level cybersecurity for a large government body. Administers Active Directory, enterprise firewalls, servers, and Nutanix HCI virtualization. Full data center lifecycle management. Configures HP/Aruba switches, surveillance systems, biometric access, and full LAN/WAN operations.</div><div class="tl-pills"><span class="pill">Active Directory</span><span class="pill">Firewall</span><span class="pill">Nutanix HCI</span><span class="pill">Data Center</span><span class="pill">HP/Aruba</span><span class="pill">LAN/WAN</span></div></div>
+      <div class="tl-entry"><div class="tl-pip"></div><div class="tl-when">Dec 2012 — Sep 2019 · 6.9 Years</div><div class="tl-role">IT Technician</div><div class="tl-org">Industrie des Nouvelles Briques — Le Kef, Tunisia</div><div class="tl-body">Network troubleshooting, security software deployment, system monitoring, server maintenance. Routine security & quality controls, data backup/recovery, user access and internet monitoring management.</div><div class="tl-pills"><span class="pill">Network Admin</span><span class="pill">Security</span><span class="pill">Server Mgmt</span><span class="pill">Backup/Recovery</span></div></div>
+      <div class="tl-entry"><div class="tl-pip"></div><div class="tl-when">Dec 2011 — Nov 2012 · 1 Year</div><div class="tl-role">IT Technician (SIVP)</div><div class="tl-org">Industrie des Nouvelles Briques — Le Kef, Tunisia</div><div class="tl-body">Preventive and corrective maintenance, network configuration, IT project participation, security implementation against malware and cyber threats.</div><div class="tl-pills"><span class="pill">Maintenance</span><span class="pill">Network Config</span><span class="pill">Security</span></div></div>
+      <div class="tl-entry"><div class="tl-pip"></div><div class="tl-when">Sep 2008 — Nov 2011 · 3.2 Years</div><div class="tl-role">IT Technician</div><div class="tl-org">Opalia Pharma — Tunisia</div><div class="tl-body">Secured IT infrastructure in a regulated pharmaceutical environment. Network configuration, threat protection, hardware/software issue resolution, IT project migration support.</div><div class="tl-pills"><span class="pill">Infrastructure</span><span class="pill">Network</span><span class="pill">Pharma IT</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="projects">
+  <div class="max">
+    <div class="s-label"><span class="s-label-num">04 </span>Projects</div>
+    <h2 class="s-title reveal">Featured <span>Projects</span></h2>
+    <div class="proj-grid">
+      <div class="proj-card reveal"><div class="proj-top"><div class="proj-bg"></div><div class="proj-grid-bg"></div><div class="proj-emoji">🤖</div><div class="proj-num">01</div></div><div class="proj-body"><div class="proj-title">Fraud Detection Model</div><div class="proj-desc">Supervised & unsupervised machine learning system for anomaly detection on a Kaggle banking dataset — identifying fraudulent transactions with high accuracy.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">Pandas</span><span class="stack-tag">ML</span></div></div></div>
+      <div class="proj-card reveal"><div class="proj-top"><div class="proj-bg"></div><div class="proj-grid-bg"></div><div class="proj-emoji">🚗</div><div class="proj-num">02</div></div><div class="proj-body"><div class="proj-title">Car Price Predictor</div><div class="proj-desc">ML-based marketplace application estimating used vehicle market value, enabling buyers and sellers to make data-driven decisions.</div><div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">Regression</span><span class="stack-tag">Data Analysis</span></div></div></div>
+      <div class="proj-card reveal"><div class="proj-top"><div class="proj-bg"></div><div class="proj-grid-bg"></div><div class="proj-emoji">🔬</div><div class="proj-num">03</div></div><div class="proj-body"><div class="proj-title">Cybersecurity Home Lab</div><div class="proj-desc">Proxmox-based home server with multiple VMs for network security testing, Cisco Packet Tracer labs (AAA, ZPF, IDS/IPS), and cybersecurity research.</div><div class="proj-stack"><span class="stack-tag">Proxmox</span><span class="stack-tag">Kali Linux</span><span class="stack-tag">Cisco</span><span class="stack-tag">VMs</span></div></div></div>
+      <div class="proj-card reveal"><div class="proj-top"><div class="proj-bg"></div><div class="proj-grid-bg"></div><div class="proj-emoji">⚙️</div><div class="proj-num">04</div></div><div class="proj-body"><div class="proj-title">Django Web Application</div><div class="proj-desc">Full-stack web application with PostgreSQL database, deployed on Ubuntu/WSL using Gunicorn as WSGI server and Nginx as reverse proxy.</div><div class="proj-stack"><span class="stack-tag">Django</span><span class="stack-tag">PostgreSQL</span><span class="stack-tag">Gunicorn</span><span class="stack-tag">Nginx</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section section-alt" id="certifications">
+  <div class="max">
+    <div class="s-label"><span class="s-label-num">05 </span>Certifications</div>
+    <h2 class="s-title reveal">Professional <span>Certifications</span></h2>
+    <div class="cert-grid">
+      <div class="cert-item reveal"><span class="cert-yr">2025</span><div class="cert-ico">🌐</div><div class="cert-name">Cisco CCNA</div><div class="cert-by">ISI Tunis · Cisco</div></div>
+      <div class="cert-item reveal"><span class="cert-yr">2025</span><div class="cert-ico">💻</div><div class="cert-name">Cisco DevNet Associate</div><div class="cert-by">ISI Tunis · 200-901</div></div>
+      <div class="cert-item reveal"><span class="cert-yr">2025</span><div class="cert-ico">🗄️</div><div class="cert-name">SQL Fundamentals</div><div class="cert-by">Softy Skills</div></div>
+      <div class="cert-item reveal"><span class="cert-yr">2021</span><div class="cert-ico">📝</div><div class="cert-name">MOS Word Expert 2016</div><div class="cert-by">Univ. Tunis El Manar</div></div>
+      <div class="cert-item reveal"><span class="cert-yr">2021</span><div class="cert-ico">📊</div><div class="cert-name">MOS Excel 2016</div><div class="cert-by">Univ. Virtuelle Tunis</div></div>
+      <div class="cert-item reveal"><span class="cert-yr">2021</span><div class="cert-ico">📋</div><div class="cert-name">MOS PowerPoint 2016</div><div class="cert-by">SmartFuture</div></div>
+      <div class="cert-item reveal"><span class="cert-yr">2019</span><div class="cert-ico">📑</div><div class="cert-name">MOS Excel & Word 2013</div><div class="cert-by">ISET Charguia</div></div>
+      <div class="cert-item reveal"><span class="cert-yr">2020</span><div class="cert-ico">🚀</div><div class="cert-name">CEFE Entrepreneurship</div><div class="cert-by">Espace Entreprendre</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="skills">
+  <div class="max">
+    <div class="s-label"><span class="s-label-num">06 </span>Skills</div>
+    <h2 class="s-title reveal">Technical <span>Proficiency</span></h2>
+    <div class="skills-layout">
+      <div class="reveal">
+        <div class="skill-cat">Security & Networks</div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">Cybersecurity & Threat Detection</span><span class="skill-p">92%</span></div><div class="skill-track"><div class="skill-bar" data-w="92"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">Network Admin (LAN/WAN/Cisco)</span><span class="skill-p">90%</span></div><div class="skill-track"><div class="skill-bar" data-w="90"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">Firewall & Security Infrastructure</span><span class="skill-p">88%</span></div><div class="skill-track"><div class="skill-bar" data-w="88"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">SIEM (Splunk, ELK, QRadar)</span><span class="skill-p">78%</span></div><div class="skill-track"><div class="skill-bar" data-w="78"></div></div></div>
+      </div>
+      <div class="reveal">
+        <div class="skill-cat">Systems & Development</div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">Virtualization (Proxmox, Nutanix)</span><span class="skill-p">85%</span></div><div class="skill-track"><div class="skill-bar" data-w="85"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">Python & Django</span><span class="skill-p">74%</span></div><div class="skill-track"><div class="skill-bar" data-w="74"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">Cloud Infrastructure (AWS, Azure)</span><span class="skill-p">68%</span></div><div class="skill-track"><div class="skill-bar" data-w="68"></div></div></div>
+        <div class="skill-item"><div class="skill-top"><span class="skill-n">Machine Learning & Data Analysis</span><span class="skill-p">65%</span></div><div class="skill-track"><div class="skill-bar" data-w="65"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section section-alt" id="education">
+  <div class="max">
+    <div class="s-label"><span class="s-label-num">07 </span>Education</div>
+    <h2 class="s-title reveal">Academic <span>Background</span></h2>
+    <div class="edu-list">
+      <div class="edu-row reveal"><div class="edu-yr">2024 – 2026</div><div><div class="edu-deg">Master's — Information Systems & Infrastructure Security (M.SSII)</div><div class="edu-sch">Institut Supérieur d'Informatique de Tunis (ISI)</div><span class="edu-note">In Progress · High Distinction</span></div></div>
+      <div class="edu-row reveal"><div class="edu-yr">2021 – 2024</div><div><div class="edu-deg">Bachelor's — Computer Systems Development (L.DSI)</div><div class="edu-sch">Institut Supérieur des Études Technologiques de Radès</div><span class="edu-note">Obtained · With Distinction</span></div></div>
+      <div class="edu-row reveal"><div class="edu-yr">2004 – 2006</div><div><div class="edu-deg">Higher Technician Diploma — Multimedia</div><div class="edu-sch">Centre de Formation Technologique, Ariana</div><span class="edu-note">Obtained · High Distinction</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="languages">
+  <div class="max" style="text-align:center;">
+    <div class="s-label" style="justify-content:center;"><span class="s-label-num">08 </span>Languages</div>
+    <h2 class="s-title reveal">Communication <span>Skills</span></h2>
+    <div class="lang-row" style="justify-content:center;">
+      <div class="lang-item reveal"><div class="lang-fl">🇸🇦</div><div class="lang-nm">Arabic</div><div class="lang-lv">Native</div></div>
+      <div class="lang-item reveal"><div class="lang-fl">🇫🇷</div><div class="lang-nm">French</div><div class="lang-lv">Advanced</div></div>
+      <div class="lang-item reveal"><div class="lang-fl">🇬🇧</div><div class="lang-nm">English</div><div class="lang-lv">Intermediate</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section section-alt" id="contact">
+  <div class="contact-glow"></div>
+  <div class="max">
+    <div class="s-label" style="justify-content:center;"><span class="s-label-num">09 </span>Contact</div>
+    <h2 class="s-title reveal" style="text-align:center;">Open to <span>Opportunities</span></h2>
+    <div class="contact-inner">
+      <p class="contact-lead reveal">Actively exploring <b>international cybersecurity roles</b>, especially in <b>Canada 🇨🇦</b>. With 17+ years of experience, Cisco certifications, and a Master's in InfoSec — ready to contribute to your organization's security posture from day one.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:haythem.bouzouraa@etudiant-isi.utm.tn" class="c-link"><span class="c-icon">📧</span><div><div class="c-lbl">Email</div><div class="c-val">haythem.bouzouraa@etudiant-isi.utm.tn</div></div></a>
+        <a href="tel:+21622876195" class="c-link"><span class="c-icon">📞</span><div><div class="c-lbl">Phone</div><div class="c-val">+216 22 876 195</div></div></a>
+        <a href="https://www.linkedin.com/in/haythem-bouzouraa-47126110b/" target="_blank" class="c-link"><span class="c-icon">🔗</span><div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/haythem-bouzouraa-47126110b</div></div></a>
+      </div>
+      <div class="availability reveal"><div class="avail-dot"></div>Available for immediate hire · Open to relocation to Canada 🇨🇦</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">HB_SEC</div>
+  <div class="footer-note">Haythem Bouzouraa · IT Security Manager · Tunis, Tunisia</div>
+  <div>🇨🇦</div>
+</footer>
+
+<script>
+// CURSOR
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+document.querySelectorAll('a,button,.exp-card,.cert-item,.proj-card,.stat-block').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.transform='translate(-50%,-50%) scale(1.5)';});
+  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.transform='translate(-50%,-50%) scale(1)';});
+});
+
+// CANVAS
+const canvas=document.getElementById('bg-canvas'),ctx=canvas.getContext('2d');
+let W,H;
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+const pts=[];
+for(let i=0;i<100;i++) pts.push({x:Math.random()*1920,y:Math.random()*1080,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.5});
+(function draw(){
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle='rgba(0,229,255,0.03)';ctx.lineWidth=1;
+  for(let x=0;x<W;x+=80){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  for(let y=0;y<H;y+=80){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+  pts.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(0,229,255,0.5)';ctx.fill();
+  });
+  for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
+    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);
+    if(d<160){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(0,229,255,${.18*(1-d/160)})`;ctx.lineWidth=.5;ctx.stroke();}
+  }
+  requestAnimationFrame(draw);
+})();
+
+// 3D CARD
+const card=document.getElementById('id-card');
+document.addEventListener('mousemove',e=>{
+  if(!card)return;
+  const r=card.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+  const dx=(e.clientX-cx)/r.width,dy=(e.clientY-cy)/r.height;
+  card.style.transform=`perspective(800px) rotateY(${dx*12}deg) rotateX(${-dy*12}deg)`;
+});
+
+// NAV
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60));
+
+// REVEAL
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+      e.target.querySelectorAll('.skill-bar').forEach(b=>setTimeout(()=>b.style.width=b.dataset.w+'%',300));
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal,.reveal-left,.tl-entry').forEach(el=>io.observe(el));
+document.querySelectorAll('.exp-grid .exp-card,.cert-grid .cert-item,.proj-grid .proj-card').forEach((el,i)=>el.style.transitionDelay=`${i*80}ms`);
+</script>
+</body>
+</html>
